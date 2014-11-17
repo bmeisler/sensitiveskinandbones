@@ -1,0 +1,110 @@
+<!doctype html>
+
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+        <title><?php wp_title(''); ?></title>
+		<!-- Google Chrome Frame for IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		 <?php if (is_home()) { ?> 
+               
+         <?php } ?>
+        
+		<!-- mobile meta (hooray!) -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<![endif]-->
+		<!-- or, set /favicon.ico for IE10 win -->
+		<meta name="msapplication-TileColor" content="#f01d4f">
+		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+<!--        <script src="--><?php //bloginfo('wpurl'); ?><!--/wp-content/js/jquery-1.8.3-min.js" type="text/javascript"></script>-->
+
+
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+		<!-- wordpress head functions -->
+		<?php wp_head(); ?>
+		<!-- end of wordpress head -->
+
+		<!-- drop Google Analytics Here -->
+		<!-- end analytics -->
+		
+		<meta name="google-site-verification" content="UpakgIyAoYefwPTgGM5pZZTlvlljudV-Bhb7nDaw4No" />
+
+	</head>
+
+	<body <?php body_class(); ?>>
+
+		<div id="container">
+
+			<header class="header" role="banner">
+
+				<div id="inner-header" class="wrap clearfix">
+
+					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
+                    <div id="headerimage">
+                    	
+                        <?php if (is_home()) { ?> 
+                        	<h1>Sensitive Skin Magazine</h1>
+                        <?php } else { ?>
+                        	<h3>Sensitive Skin Magazine</h3>
+                        <?php } ?>
+                        <!--LOGO-->
+                        <figure id="figure-logo">
+                        <a href="<?php bloginfo('url'); ?>" ><img src="http://www.sensitiveskinmagazine.com/wp-content/images/SensitiveSkinLogo_trimmed_halfsize.png" alt="SensitiveSkinLogo" /></a>
+                        </figure>
+                    </div>
+                    <?php
+                    if( $_SERVER['SERVER_ADDR'] === '127.0.0.1'){ 
+				        echo '<b> - Working locally</b>';
+				    }
+                    ?>
+                    <div id="search-form-container">
+                    <?php get_search_form() ?>
+                    </div>
+                    
+					<!-- if you'd like to use the site description you can un-comment it below -->
+					<?php // bloginfo('description'); ?>
+
+					
+					<nav id="access" role="navigation" class="sticky-menu">
+						<?php bones_main_nav(); ?>
+						<ul id="social"class="widget">
+						 
+
+		                    <li id="social-button-youtube-icon"><a href="http://www.youtube.com/sensitiveskintv"/></a></li>
+				            <li id="social-button-google-plus-icon"><a href="//plus.google.com/100022193362098500932?prsrc=3" rel="publisher" style="text-decoration:none;"></a></li>
+		                    <li id="social-button-tumblr-icon"><a href="http://sensitivemag.tumblr.com"/></a></li>
+		                    <li id="social-button-twitter-icon"><a href="http://www.twitter.com/sensitivemag" ></a></li>
+			                <li id="social-button-facebook-icon"><a href="http://www.facebook.com/pages/Sensitive-Skin-Magazine/123073751068181"></a></li>
+			                <li id="social-button-rss-icon"><a href="http://sensitiveskinmagazine.com/feed/"/></a></li>
+			                    
+			                    
+			                    <!--
+ <li><a href="http://www.youtube.com/sensitiveskintv"/><img src="http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/youtube_icon.png" width="24" height="24" alt="Follow us on YouTube" title="Follow us on YouTube"/></a></li>
+				                    <li><a href="//plus.google.com/100022193362098500932?prsrc=3" rel="publisher" style="text-decoration:none;">
+		                        <img src="http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/google-plus.png" width="24" height="24" alt="Follow us on Google+" title="Follow us on Google+"/></a>
+		                    </li>
+		                    <li><a href="http://sensitivemag.tumblr.com"/><img src="http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/tumblr_icon.png" width="24" height="24" alt="Follow us on Tumblr" title="Follow us on Tumblr"/></a></li>
+		
+		                    <li><a href="http://www.twitter.com/sensitivemag" ><img src="http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/twitter_bird_small.png" width="24" height="24" alt="Follow us on Twitter" title="Follow us on Twitter"/></a></li>
+			                    <li><a href="http://www.facebook.com/pages/Sensitive-Skin-Magazine/123073751068181"><img src="http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/facebook_small.png" width="24" height="24" alt="Follow us on Facebook" title="Follow us on Facebook"/></a></li>
+			                    <li><a href="http://sensitiveskinmagazine.com/feed/"/><img src="http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/Feed-icon_small.png" width="24" height="24" alt="RSS feed" title="RSS feed"/></a></li>
+-->
+		                </ul>
+
+					</nav>
+				</div> <!-- end #inner-header -->
+
+			</header> <!-- end header -->
