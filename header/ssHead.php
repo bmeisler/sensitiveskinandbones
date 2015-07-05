@@ -37,6 +37,8 @@ function popitup(url, params) {
 </script>
 
 
+
+
 <link rel="stylesheet" href=<?php bloginfo('stylesheet_url'); ?> type="text/css" media="screen" />
 
 
@@ -59,6 +61,8 @@ function popitup(url, params) {
 
 
 <script src="<?php bloginfo('wpurl'); ?>/wp-content/js/jquery.cookie.js" type="text/javascript"></script>
+
+
 
 <!--Jquery for menu to make it smoother-->
      <script type="text/javascript">

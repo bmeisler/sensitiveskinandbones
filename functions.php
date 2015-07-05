@@ -47,8 +47,15 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 add_theme_support( 'post-thumbnails' ); 
-// Thumbnail sizes
-// add_image_size( 'bones-thumb-600', 600, 600, true );
+// Image sizes
+ add_image_size( '600w', 600, 9999, false ); 
+ 
+ add_action( 'after_setup_theme', 'baw_theme_setup' );
+function baw_theme_setup() {
+add_image_size( '600w', 600, 9999, false );
+  add_image_size( 'category-thumb', 300 ); // 300 pixels wide (and unlimited height)
+  add_image_size( 'homepage-thumb', 220, 180, true ); // (cropped)
+}
 // add_image_size( 'bones-thumb-300', 300, 200, false );
 // add_image_size( 'bones-thumb-200', 200, 133 );
 /* 
@@ -235,6 +242,33 @@ add_filter('upload_mimes','add_custom_mime_types');
                         'svg' => 'image/svg+xml'
 		));
 	}
+
+  //[myjavascript]
+// function myjavascript_func( $atts ){
+//  return "<script>alert('hello world');</script>";
+// }
+// add_shortcode( 'myjavascript', 'myjavascript_func' );
+
+ function add_scripts() {
+ 	  //echo('addscripts');
+   	//wp_enqueue_script( 'howdy',  '/wp-content/js/howdy.js', array(), '1.0.0', true );
+   	wp_enqueue_script('preload', "https://code.createjs.com/preloadjs-0.6.0.min.js", array(), '0.6.0', true);
+   	//wp_enqueue_script( 'underscore',  'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js', array(), '1.0.0', true );
+      	//wp_enqueue_script( 'underscore',  '/wp-content/js/underscore_1.7.0.js', array(), '1.0.0', true );
+
+   	wp_enqueue_script( 'random-image',  '/wp-content/js/random-image.js', array('preload', 'underscore'), '1.0.0', true );
+
+ }
+
+// function howdy(){
+//   <script type="text/javascript">
+//     function howdy(){
+//         alert("howdy");
+//     }
+// </script>
+// }
+add_action( 'wp_enqueue_scripts', 'add_scripts' );
+
 //CUSTOM CODE FOR EASY DIGITAL DOWNLOADS - FIRST CHECKBOX SHOULD NO LONGER BE CHECKED BY DEFAULT
 
 /**

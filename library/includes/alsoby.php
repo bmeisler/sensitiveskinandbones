@@ -55,6 +55,44 @@ if ($tagValue != ""){
 }
 
 
+$posttags = get_the_tags();
+if ($posttags) {
+  foreach($posttags as $tag) {
+  	  	if($tag->name == "national-poetry-month"){
+  	  	echo $tag->name;
+
+  	$tagValue="national-poetry-month";
+	  	  $my_query = new
+    WP_Query('showposts=99&orderby=desc&tag='.$tagValue);
+
+    if( $my_query->have_posts() ) {
+
+
+        while ($my_query->have_posts()) : $my_query->the_post(); if( $post->ID == $orig_post->ID ) continue;
+            $found = true;
+            if($addTitle == true){
+                echo '<div id="relatedposts"><div id="relatedpoststitle">If you liked this, try:</div><ul>';
+                $addTitle = false;
+            }
+            ?>
+            <li><?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
+            if($subtitle){
+                echo $subtitle;
+            }else{
+                the_author();
+            }
+            echo ' - ';?><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+        <?php
+        endwhile;
+
+    }
+
+  	}
+    
+  }
+}
+
+
 $post = $orig_post;
 
 //wp_reset_query();

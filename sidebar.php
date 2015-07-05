@@ -17,7 +17,9 @@
 
 					<?php endif; ?>-->
 					    
-					    <?php get_sidebar('PDF11'); ?>
+					    <?php get_sidebar('litbreaker'); ?>
+					    
+					    <!--<?php get_sidebar('PDF11'); ?>>-->
 
 
 					   <?php get_sidebar('Donate'); ?>
@@ -33,7 +35,7 @@
 						<?php
 						    
 						  
-			                $input = array("PDF8", "PDF9", "PDF10");
+			                $input = array("PDF8", "PDF9", "PDF10", "PDF11");
 			                $rand_key = array_rand($input);
 			                get_sidebar($input[$rand_key]);
 			            ?>
