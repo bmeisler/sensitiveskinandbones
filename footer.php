@@ -1,6 +1,6 @@
 			
 			<div id="footer-container" class="clearfix">
-				<!--<?php include("footer/recentPostsFiveCol.php"); ?>-->
+				<?php include("footer/recentPostsFiveCol.php"); ?>
 				
 				<footer class="footer" role="contentinfo">
 		
