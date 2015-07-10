@@ -4,8 +4,8 @@
 							<p class="top"><i>Publisher:</i> Bernard Meisler</p>
 							<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
 							<p><i>Music Editor:</i> Steve Horowitz</p>
-							<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, Franklin Mount</p>
-							<br><p>&copy; 2014 Sensitive Skin Magazine</p>
+							<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, Franklin Mount, Patrick O'Neil</p>
+							<br><p>&copy; 2015 Sensitive Skin Magazine</p>
 						</div>
 						<div class="threecol footer-col">
 <!-- Column one start -->
