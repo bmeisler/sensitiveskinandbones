@@ -18,11 +18,11 @@ module.exports = function (grunt) {
                 options: {
                     // Specifies directories to scan for @import directives when parsing. 
                     // Default value is the directory of the source, which is probably what you want.
-                    paths: ["library/css/"],
+                    paths: ["library/less/"],
                 },
                 files: {
                     // compilation.css  :  source.less
-                    "library/css/app.css": "public/css/app.less"
+                    "library/css/style.css": "library/less/style.less"
                 }
             },
         },
