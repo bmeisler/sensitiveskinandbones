@@ -193,7 +193,9 @@ echo "<br>left<br>";
 				    <?php get_sidebar(); ?>
 				    
 				</div> <!-- end #inner-content -->
-    
-			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+			<?php get_footer(); ?>
+    
+		</div> <!-- end #content -->
+
+
