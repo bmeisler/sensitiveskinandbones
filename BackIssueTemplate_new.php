@@ -40,7 +40,7 @@ Template Name: New Back Issue Template
 							Number 10, Fall 2013.
 						</div>
 						<div id="issueContent">
-							Writing by Gary Indiana, Max Blagg, Sharon Mesmer, Drew Hubner, Patrick O'Neil, Ron Kolm, James Reich, Nick Zedd, photographs by Charles Gatewood, paintings by Peter Shear, music by Steve Adams, and much more.
+							Writing by Gary Indiana, Max Blagg, Sharon Mesmer, Drew Hubner, Patrick O'Neil, Ron Kolm, James Reich, Nick Zedd, Breyten Breytenback, Pete Simonelli, photographs by Charles Gatewood, paintings by Peter Shear, music by Steve Adams, and much more.
 						</div>
 						<div id="issueLink">
 							PDF Edition - <a href="http://sensitiveskinmagazine.com/downloads/sensitive-skin-10/">Buy Now</a>
@@ -70,19 +70,22 @@ Template Name: New Back Issue Template
 					</div>
 					<div id="threecol3">
 						<div>
-							
+							<a href="http://sensitiveskinmagazine.com/downloads/sensitive-skin-12/"><img src="http://sensitiveskinmagazine.com/wp-content/images/covers/SSM12_300w.jpg" width="300" height="372" alt="Sensitive Skin Magazine Number 12" /></a>
+
 						</div>
 						<div id="issueNumber">
-							
+							Number 12, Spring 2015.
 						</div>
 						<div id="issueContent">
-							
+							Writing by Jack Micheline, Bob Holman, Wanda Phipps, Hal Sirowitz, Taylor Mead, Sharon Mesmer, David Rattray, Emily XYZ, John S. Hall, art by John Lurie, Charles Gatewood, Winston Smith, Justine Frischmann, Jean-Christian Bourcart, Ruby Ray, JD King, and much more.
 						</div>
 						<div id="issueLink">
-							
+							PDF Edition - <a href="http://sensitiveskinmagazine.com/downloads/sensitive-skin-12/">Buy Now</a>
 						</div>
 						<div id="issueLink">
-													</div>
+							Print Edition - <a href="http://www.amazon.com/Sensitive-Skin-12-Bernard-Meisler/dp/099615700X/ref=sr_1_2?s=books&ie=UTF8&qid=1437615614&sr=1-2&keywords=Bernard+Meisler" target="_blank">Buy Now</a>
+
+						</div>
 					</div>
 				</div>
 			</div>

@@ -19,10 +19,12 @@
 					    
 					    <?php get_sidebar('litbreaker'); ?>
 					    
-					    <!--<?php get_sidebar('PDF11'); ?>>-->
+					    
 
 
-					   <?php get_sidebar('Donate'); ?>
+					    <?php get_sidebar('Donate'); ?>
+
+					    <?php get_sidebar('Animated'); ?>
                      
 			            <?php get_sidebar('TOC'); ?>
 			           <!--
@@ -32,13 +34,15 @@
 			                $rand_key = array_rand($input);
 			                get_sidebar($input[$rand_key]);
 			            ?>-->
-						<?php
+						<!--<?php
 						    
 						  
-			                $input = array("PDF8", "PDF9", "PDF10", "PDF11");
+			                $input = array("PDF8", "PDF12", "PDF9", "PDF10");
 			                $rand_key = array_rand($input);
+			                print($rand_key);
+			                print($input[$rand_key]);
 			                get_sidebar($input[$rand_key]);
-			            ?>
+			            ?>-->
 			           
 			          
 
