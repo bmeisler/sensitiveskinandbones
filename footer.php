@@ -1,11 +1,16 @@
 			
 			<div id="footer-container" class="clearfix">
-				<?php include("footer/recentPostsFiveCol.php"); ?>
+<?php wp_reset_query(); ?>
+<?php if (!is_home()) { ?>
+<?php include("footer/recentPostsFiveCol.php"); ?>
+<?php } ?>
+				
 				
 				<footer class="footer" role="contentinfo">
 		
 					<div id="inner-footer" class="wrap clearfix">
-							<?php include("footer/blogRoll.php"); ?>
+
+					<?php include("footer/blogRoll.php"); ?>
 					</div> <!-- end #inner-footer -->
 			
 					</footer> <!-- end footer -->
