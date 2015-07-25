@@ -256,7 +256,9 @@ add_filter('upload_mimes','add_custom_mime_types');
    	//wp_enqueue_script( 'underscore',  'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js', array(), '1.0.0', true );
       	//wp_enqueue_script( 'underscore',  '/wp-content/js/underscore_1.7.0.js', array(), '1.0.0', true );
 
-   	wp_enqueue_script( 'random-image',  '/wp-content/js/random-image.js', array('preload', 'underscore'), '1.0.0', true );
+   	//wp_enqueue_script( 'random-image',  '/wp-content/js/random-image.js', array('preload', 'underscore'), '1.0.0', true );
+    wp_enqueue_script( 'random-image',  '/wp-content/js/random-image-dnd.js', array('preload', 'underscore'), '1.0.0', true );
+
 
  }
 
