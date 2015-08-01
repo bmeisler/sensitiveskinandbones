@@ -790,16 +790,14 @@ figure{
     text-indent:0 !important;
     margin-bottom:12px;
     
-               
+              
+}
+p + figcaption{//gets rid of space from empty p tag sometimes added above figcaption by Chrome and FF
+	margin-top: -12px !important;
 }
 
     .figure-medium-left{
 		    width:66.67%;
-		    //height:auto;
-		    //font-size: 0.9em;
-		    //line-height: 1.2em;
-		    //text-indent: 0px;		
-		    //margin: 0 10px 0 0;
 		    float:left;
 		    
 		figcaption{
@@ -809,20 +807,10 @@ figure{
 	.figure-medium-left img{
 		    	width:100%;
 				height:auto;
-				//font-size: 0.9em;
-				//line-height: 1.2em;
-		    //text-indent: 0px;		
-		    //margin: 0 10px 0 0;
-		    
 		} 
-		    .figure-medium-right{
+	.figure-medium-right{
 		    width:66.67%;
 		    padding-left:5px;
-		    //height:auto;
-		    //font-size: 0.9em;
-		    //line-height: 1.2em;
-		    //text-indent: 0px;		
-		    //margin: 0 10px 0 0;
 		    float:right;
 		    
 		figcaption{
@@ -832,35 +820,29 @@ figure{
 	}
 	.figure-medium-right img{
 		    	width:100%;
-				height:auto;
-				//font-size: 0.9em;
-				//line-height: 1.2em;
-		    //text-indent: 0px;		
-		    //margin: 0 10px 0 0;
-		    
+				height:auto; 
 		} 
 		.figure-50-left{
 		    width:50%;
 		    padding: 5px;
-		    /*
-height:auto;
-		    font-size: 0.9em;
-		    line-height: 1.2em;
-		    text-indent: 0px;		
-		    margin: 0 10px 0 0;
-*/
 		    float:left;
 		}  
 		.figure-50-left img{
+		    width:100%; 
+		    height:auto;
+		}
+		.figure-50-right{
+		    width:50%;
+		    padding: 5px;
+		    float:right;
+		    figcaption{
+				//width:66.7%;
+				text-align: right;			
+		}
+		}  
+		.figure-50-right img{
 		    width:100%;
 		    height:auto;
-		    /*
-font-size: 0.9em;
-		    line-height: 1.2em;
-		    text-indent: 0px;		
-		    margin: 0 10px 0 0;
-		    float:left;
-*/
 		}
 		.imageFull{
 			font-size: 11px;
@@ -925,7 +907,7 @@ font-size: 0.9em;
 		    margin: 0 0 0 10px;
 		    float:right;
 		}
-		.figure-left-stacked {
+		.figure-left-stacked {//used in mayakovsky piece
 			width:48%;
 		    height:auto;
 		    margin: 0 0 0px 0;
@@ -934,6 +916,11 @@ font-size: 0.9em;
 		    text-indent: 0px;		
 		    margin: 0 1% 0 0;
 		    float:left; 
+		    figcaption{
+				
+				text-align: left;
+				margin-top:15px;			
+			}
 		}
 		.figure-right-stacked {
 			width:48%;
@@ -944,6 +931,10 @@ font-size: 0.9em;
 		    text-indent: 0px;		
 		    margin: 0 0 0 1%;
 		    float:right;
+		    figcaption{
+				text-align: right;
+				margin-top:15px;			
+			}
 		}
 		.figure-left-stacked img{
 			width:100%;
@@ -990,7 +981,7 @@ font-size: 0.9em;
 			figcaption  {
 			 	width:100%;
 			 	font-size: 11px;
-					float: left;
+					//float: left;
 					text-indent:0em;
 					position:relative;
 					left:0px;
@@ -998,7 +989,7 @@ font-size: 0.9em;
 				p{
 					font-size: 11px;
 					width: 100%;
-					float: left;
+					//float: left;
 					text-indent:0em;
 					position:relative;
 					left:0px;
@@ -1037,7 +1028,8 @@ font-size: 0.9em;
 				
 				}
 			}
-			.caption-right-stacked{
+			/*
+.caption-right-stacked{
 			 	width:100%;
 			 	float:right;
 				p{
@@ -1066,6 +1058,7 @@ font-size: 0.9em;
 				
 				}
 			}
+*/
 			 
 //KEY DEFINITIONS HERE - PARAGRAPH, ETC.
 			p {
