@@ -252,7 +252,11 @@ add_filter('upload_mimes','add_custom_mime_types');
  function add_scripts() {
  	  //echo('addscripts');
    	//wp_enqueue_script( 'howdy',  '/wp-content/js/howdy.js', array(), '1.0.0', true );
-   	wp_enqueue_script('preload', "https://code.createjs.com/preloadjs-0.6.0.min.js", array(), '0.6.0', true);
+   //	wp_enqueue_script('preload', "https://code.createjs.com/preloadjs-0.6.0.min.js", array(), '0.6.0', true);
+      wp_enqueue_script('preload', "https://code.createjs.com/createjs-2015.05.21.min.js", array(), '0.6.0', true);
+
+    
+    
    	//wp_enqueue_script( 'underscore',  'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js', array(), '1.0.0', true );
       	//wp_enqueue_script( 'underscore',  '/wp-content/js/underscore_1.7.0.js', array(), '1.0.0', true );
 
