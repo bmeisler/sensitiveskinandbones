@@ -48,15 +48,24 @@
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section> <!-- end article section -->
-						
+								
+								<?php // end article section ?>
+
+                <footer id="relatedposts" class="article-footer">
+
+                  <?php printf( __( 'filed under', 'bonestheme' ).': %1$s', get_the_category_list(', ') ); ?>
+
+                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+                </footer> <?php // end article footer ?>
 					
 							</article> <!-- end article -->
                        
                        <?php if( function_exists( do_sociable() ) ){ do_sociable(); }    ?>
-                        <?php 
+                       <!--  <?php 
                         if (!in_array("download", $classes)) {//don't show 'more like this' for downloads - or else show more downloads, not articles!
                         	include("library/includes/alsoby.php"); 
-                        }?>
+                        }?> -->
 					<?php comments_template(); ?>
 						<?php endwhile; ?>			
 					
