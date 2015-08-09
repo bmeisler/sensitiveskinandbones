@@ -243,6 +243,30 @@ add_filter('upload_mimes','add_custom_mime_types');
 		));
 	}
 
+  
+  // customized version of the_tags - can exclude certain  tag names
+ function pk_the_tags( $before = '', $sep = ', ', $after = '', $exclude = '' ) {
+        $tags = get_the_tags();
+        if ( empty( $tags ) )
+                return false;
+        $tag_list = $before;
+        foreach ( $tags as $tag ) {
+                 if (!empty($exclude))  
+                        $pos = stripos( $exclude, $tag->name);
+                 else
+                        $pos = false;
+                 if ($pos=== false)
+                        $tag_links[] = '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>'; 
+        }
+        if (empty($tag_links))
+           return false;
+        $tag_links = join( $sep, $tag_links );
+        $tag_links = apply_filters( 'the_tags', $tag_links );
+        $tag_list .= $tag_links;
+        $tag_list .= $after;
+        echo $tag_list;
+}
+
   //[myjavascript]
 // function myjavascript_func( $atts ){
 //  return "<script>alert('hello world');</script>";
@@ -265,6 +289,7 @@ add_filter('upload_mimes','add_custom_mime_types');
 
 
  }
+
 
 // function howdy(){
 //   <script type="text/javascript">
