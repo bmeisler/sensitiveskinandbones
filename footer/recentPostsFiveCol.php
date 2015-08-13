@@ -19,17 +19,10 @@ Previously, on Sensitive Skin!
 					//echo "no image, let's get one";
 					 $img_path =  catch_that_image();
 					 
-					  if ($img_path != '' && $img_path != null){
+					  if ($img_path != '' && $img_path != null && $img_path != undefined){
 						 $sizes = getimagesize($img_path);
 	                     $current_width = $sizes[0];
 	                     $current_height = $sizes[1];
-
-	                     if ($current_height===0 || $current_height===null){
-	                     	$current_height = 1;
-	                     }
-	                     if ($current_width = 0 || $current_width===null){
-	                     	$current_width = 1;
-	                     }
 	                     
 	                     $original_aspect = $current_width / $current_height;
 	                     $maxheight = $current_width/$original_aspect;
