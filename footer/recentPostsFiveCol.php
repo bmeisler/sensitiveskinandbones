@@ -23,6 +23,13 @@ Previously, on Sensitive Skin!
 						 $sizes = getimagesize($img_path);
 	                     $current_width = $sizes[0];
 	                     $current_height = $sizes[1];
+
+	                     if ($current_height===0 || $current_height===null){
+	                     	$current_height = 1;
+	                     }
+	                     if ($current_width = 0 || $current_width===null){
+	                     	$current_width = 1;
+	                     }
 	                     
 	                     $original_aspect = $current_width / $current_height;
 	                     $maxheight = $current_width/$original_aspect;
