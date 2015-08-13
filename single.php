@@ -64,10 +64,7 @@
 							</article> <!-- end article -->
                        
                        <?php if( function_exists( do_sociable() ) ){ do_sociable(); }    ?>
-                       <!--  <?php 
-                        if (!in_array("download", $classes)) {//don't show 'more like this' for downloads - or else show more downloads, not articles!
-                        	include("library/includes/alsoby.php"); 
-                        }?> -->
+                       
 					<?php comments_template(); ?>
 						<?php endwhile; ?>			
 					
