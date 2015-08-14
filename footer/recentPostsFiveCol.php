@@ -16,8 +16,13 @@ Previously, on Sensitive Skin!
 						<img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic" />
 					</a>
 
-				<?php } else if ( has_post_thumbnail() ) {
+				<?php } else if ( has_post_thumbnail() ) { ?>
+					<a href="<?php the_permalink(); ?>" rel="bookmark">
+					<?php
 						the_post_thumbnail('thumbnail');
+					?>
+					</a>
+					<?php
 					}else { ?>
 					<a href="<?php the_permalink(); ?>" rel="bookmark">
 						<img src="/wp-content/images/tns/default-img_inverted.jpg" />
