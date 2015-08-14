@@ -9,34 +9,20 @@ Previously, on Sensitive Skin!
 		<?php while ($current_issue_query->have_posts()) : $current_issue_query->the_post(); 
 		$postimageurl = get_post_meta($post->ID, 'post-img', true);
 		$tnCount++;?>
-		
+			
 			<div id="column<?php echo $tnCount; ?>" >
 				<?php if ($postimageurl) { ?>
 					<a href="<?php the_permalink(); ?>" rel="bookmark">
 						<img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic" />
 					</a>
-				<?php } else { 
-					//echo "no image, let's get one";
-					 $img_path =  catch_that_image();
-					 
-					  if ($img_path != '' && $img_path != null && $img_path != undefined){
-						 $sizes = getimagesize($img_path);
-	                     $current_width = $sizes[0];
-	                     $current_height = $sizes[1];
-	                     
-	                     $original_aspect = $current_width / $current_height;
-	                     $maxheight = $current_width/$original_aspect;
-						
-						 ?>
-					
-                       
-						 <a href="<?php the_permalink(); ?>" rel="bookmark">
-							 <img src="<?php echo $img_path; ?>" width="<?php echo $width;?>" height="<?php echo $height;?>"  />													 </a>
 
-
+				<?php } else if ( has_post_thumbnail() ) {
+						the_post_thumbnail('thumbnail');
+					}else { ?>
+					<a href="<?php the_permalink(); ?>" rel="bookmark">
+						<img src="/wp-content/images/tns/default-img_inverted.jpg" />
+					</a>
 					
-					
-				<?php } ?>	
 				<?php } ?>
 				<div id="SmallArchiveTitle"><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></div> 		
 			    <?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
