@@ -49,7 +49,7 @@
                                 <?php if ( has_post_thumbnail() ) { ?>
                                 <figure class="post-img-thumb">
                                     <a href="<?php the_permalink(); ?>" rel="bookmark">
-                                        <?php the_post_thumbnail('thumbnail');?>
+                                    	<?php the_post_thumbnail('thumbnail');?>
                                     </a>
                                 </figure>
 
@@ -59,16 +59,7 @@
                                     <figure class="post-img">
                                         <a href="<?php the_permalink(); ?>" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                                     </figure>
-                                    <?php } else {
-                                    $img_path =  catch_that_image();
-                                    if ($img_path != ''){ ?>
-                                        <figure class="post-img">
-                                            <img src="<?php echo $img_path; ?>"  />
-                                        </figure>
-                                        <?php }
-
-
-                                }?>
+                                    <?php } ?>
 
                                 <?php } ?>
 
