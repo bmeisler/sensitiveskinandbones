@@ -623,15 +623,16 @@ mobile. Make sure to double check these!
 
 
 /*************MENU STUFF FOR LARGER SIZES********************/
+
+//WHERE WE SET THE FONT SIZE AND COLOR - THIS IS A LITTLE BIGGER AT THIS SIZE 
 #menu-categoriesmenu a {
 		float: left;
 		padding: 12px 15px;
-		color: #999;
+		color: #ccc;
 		text-transform: uppercase;
 		font: bold 12px Arial, Helvetica;
 		text-decoration: none;
-		text-shadow: 0 1px 0 #000;
-		
+		text-shadow: 0 1px 0 #000;	
 	}
 	
 	#menu-categoriesmenu li:hover > a {
@@ -661,9 +662,30 @@ mobile. Make sure to double check these!
 		-o-transition: all .2s ease-in-out;
 		transition: all .2s ease-in-out;  
 	}
+	#menu-categoriesmenu ul a {    
+		padding: 10px;
+		width: 250px;
+		_height: 10px; /*IE6 only*/
+		display: block;
+		white-space: nowrap;
+		float: none;
+		text-transform: none;
+	}
+		//ONLY THING NEEDED TO BLOCK SUBMENUS - visibility: hidden
+	#menu-categoriesmenu li:hover > ul {
+		opacity: 1;
+		visibility: visible;
+		margin: 0;
+	}
+
 
 #social {
+  display:block;
+  position: absolute;
+  float:left;
   right:0px;
+  top:5px;
+  margin:0px;
 }
 /***************THREE COLUMNS, FOR LARGER SIZES BOOKS AND BACK ISSUES ********/
 /*Code for 3 columns, used in back issues section */
