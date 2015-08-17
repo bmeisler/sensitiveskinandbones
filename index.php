@@ -11,12 +11,23 @@
 		         	<?php include("includes/front-page-image.php"); ?>   
 		                        
 			                          
-                                         
+                                    
 	                 <h3 class="archive-post-title">
 	                    <a href="<?php the_permalink() ?>">
 	                        <?php the_title(); ?>
 	                    </a>
 	                 </h3>
+	                 
+	                     <?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
+                                        if (!$subtitle)
+                                        {
+                                            echo '<div class="archive-author">'.bones_get_the_author_posts_link().'</div>';
+                                        }
+                                        else if ($subtitle)
+                                        {
+                                            echo '<div class="archive-author">'.$subtitle.'</div>';
+                                        }
+                                        ?> 
 		                                
 	                <div class="entry">
 	                    <?php the_excerpt() ?>
